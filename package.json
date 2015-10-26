@@ -1,0 +1,20 @@
+{
+  "name": "angular2-canvas-sample",
+  "version": "1.0.0",
+  "description": "POC canvas with Angular2",
+  "main": "index.js",
+  "devDependencies": {
+    "live-server": "^0.8.2",
+    "typescript": "^1.6.2"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-alpha.44",
+    "systemjs": "0.19.5"
+  },
+  "scripts": {
+    "tsc": "tsc -p src -w",
+    "start": "live-server --open=src --ignore=.idea,node_modules,.git"
+  },
+  "author": "Alex Otero (fos-alex)",
+  "license": "ISC"
+}
