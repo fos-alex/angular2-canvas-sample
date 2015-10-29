@@ -13,7 +13,7 @@
   },
   "scripts": {
     "tsc": "tsc -p src -w",
-    "start": "live-server --open=src --ignore=.idea,node_modules,.git"
+    "start": "live-server --open=src --ignore=.idea,node_modules,.git,.gitignore,README.md"
   },
   "author": "Alex Otero (fos-alex)",
   "license": "ISC"

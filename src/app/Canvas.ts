@@ -1,4 +1,4 @@
-import {ElementRef} from 'angular2/angular2';
+import {ElementRef, EventEmitter, Output} from 'angular2/angular2';
 
 export class Canvas {
 
@@ -28,12 +28,14 @@ export class Canvas {
       sAngle: 0,
       eAngle: 2 * Math.PI
     };
+
     ctx.beginPath();
     ctx.arc(ball.x, ball.y, ball.r, ball.sAngle, ball.eAngle);
     ctx.fillStyle = "green";
     ctx.fill();
     ctx.lineWidth = 2;
     ctx.stroke();
+
     this.shapes++;
   }
 
@@ -49,6 +51,7 @@ export class Canvas {
     ctx.fillStyle = "blue";
     ctx.lineWidth = 2;
     ctx.fillRect(square.x, square.y, square.w, square.h);
+
     this.shapes++;
   }
 
