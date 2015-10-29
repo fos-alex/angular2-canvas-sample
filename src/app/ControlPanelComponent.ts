@@ -10,7 +10,7 @@ import {Canvas} from "./Canvas";
   template: `
     <div>
       <div>
-        <span><strong>Shapes:</strong> {{canvas.shapes}}</span>
+        <span><strong>Shapes:</strong> {{shapes}}</span>
         <span> | </span>
         <span><strong>Shapes per minute:</strong> {{((60 * 1000) / funcCallAvgTime).toFixed()}}</span>
         <span> | </span>
@@ -59,6 +59,8 @@ export class ControlPanelComponent {
 
   public  funcCallAvgTime: number = 0;
   public  drawingAvgTime: number  = 0;
+  public  shapes: number = 0;
+
 
   constructor(canvas: CanvasService) {
     this.canvas = canvas.getCanvas();
@@ -90,6 +92,7 @@ export class ControlPanelComponent {
   }
 
   endAddShape() {
+    this.shapes++;
     var now = performance.now();
     var shapeAddTime = (now - this.tmpTimer);
     this.addStack.push(shapeAddTime);

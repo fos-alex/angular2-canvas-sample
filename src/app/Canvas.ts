@@ -2,7 +2,6 @@ import {ElementRef, EventEmitter, Output} from 'angular2/angular2';
 
 export class Canvas {
 
-  public shapes: number = 0;
   public element;
   public context;
 
@@ -35,8 +34,6 @@ export class Canvas {
     ctx.fill();
     ctx.lineWidth = 2;
     ctx.stroke();
-
-    this.shapes++;
   }
 
   addSquare(x: number = 95, y: number = 50, width: number = 10, height: number = 10) {
@@ -51,8 +48,6 @@ export class Canvas {
     ctx.fillStyle = "blue";
     ctx.lineWidth = 2;
     ctx.fillRect(square.x, square.y, square.w, square.h);
-
-    this.shapes++;
   }
 
 }
